@@ -41,6 +41,7 @@
     background-color: #f2e7c9;
     flex-wrap: wrap;
     height: 100vh;
+    min-height: 1000px;
     /* border: solid;  */
 
   }
