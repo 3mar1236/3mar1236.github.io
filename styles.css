@@ -129,11 +129,13 @@
     align-items: center;
     height: 80%;
     width: 50%;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
 
     /* border: solid; */
   }
+.middle-footer > p{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align:center;
+}
   #tribute-link{
     color: #d9543f;
   }
