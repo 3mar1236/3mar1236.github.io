@@ -22,7 +22,7 @@
 }
 
 html{
-  overflow: hidden;
+/*   overflow: hidden; this is bad it locks the viewport when i open the keyboard on iphone :( */
   background-color: var(--app-background-color);
   font-family: var(--font-family)
 
