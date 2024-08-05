@@ -1,0 +1,207 @@
+
+
+.hi-nav{
+    display: flex;
+    position:sticky;
+    /* justify-content: space-between; */
+    top: -1px;
+    z-index: 2;
+    background-color: var(--base-dark);
+    max-width: 100vw;
+    border-bottom: 1px solid var(--neutral);
+}
+
+.the-brain{
+    transition: ease-in 0.1s;
+}
+.hi-nav.scrolled .the-brain{
+    transition: ease-in 0.3s;
+    transform: scale(1.2) translate(150px,8px) rotate(10deg);
+}
+.nav-logo path:not(.the-brain){
+    transition: ease-in 0.05s;
+}
+.hi-nav.scrolled .nav-logo path:not(.the-brain){
+fill: transparent;
+}
+.hi-nav.scrolled .logo-container{
+height: 4rem;
+}
+
+
+.nav-logo{
+    padding: 1vw;
+    padding-left: 5vw;
+    padding-bottom: 0;
+    fill: white;
+    width: 20vw;
+    max-width: 170px;
+    /* transform: scale(0.55); */
+    /* outline:purple 2px solid; */
+}
+
+.nav-link-container, .donate-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.nav-link-container{
+    width: 70vw;
+    gap: 10px;
+    align-items: center;
+    /* padding-top: 40px;
+    padding-top: 40px;
+    padding-top: 40px; */
+}
+
+.donate-container{
+    max-width : 15vw;
+    min-width: 144px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--neutral);
+    font-family: var(--ff);
+    font-weight: bold;
+    /* font-size: 1.25rem; */
+    /* font-size: min(1.25vw, 1.125rem); */
+    font-size:  0.85rem;
+    transition: 0.25s ease-in-out;
+}
+.nav-link:nth-of-type(2){
+    display: grid;
+    grid-template-columns: 1fr fit-content;
+    grid-template-rows: 1fr;
+    grid-column:1/2;
+    max-width: 10vw;
+    
+
+}
+.nav-link:nth-of-type(3){
+    display: grid;
+    grid-template-columns:  1fr fit-content;
+    grid-template-rows: 1fr;
+    grid-column:1/2;
+    max-width: 14vw;
+}
+.nav-link hr{
+
+    grid-column:1/2;
+    grid-row: 2;
+    transform: scaleX(0);
+    border: solid 1.3px;
+    border-radius: 10px;
+    transition: 0.25s ease-in-out;
+}
+.nav-link:hover{
+    transform: scale(1.125);
+    color: var(--primary);
+}
+.nav-link:hover hr{
+    transform: scaleX(1);
+    border-color: var(--primary);
+}
+
+.nav-menue{
+    grid-column: 2/3;
+    grid-row: 0;
+    height: 2.5vw;
+    max-height: 1rem;
+    fill: var(--neutral);
+    float: right;
+    transform: translateY(1.5px) rotate(0deg) scale(1.4);
+    transition: 0.5s ease-out;
+}
+.nav-link:hover .nav-menue{
+    transform: translateY( 0px) rotate(180deg) scale(1.4);
+    fill: var(--primary);
+}
+
+.donate-button {
+    margin-right: min(3rem, 2vw);
+    color: var(--base);
+    transition: 0.3s ease-in-out;
+    font-family: var(--ff);
+    font-weight: bold;
+    border: outset var(--primary-dark) 0px;
+    border-radius: 5rem;
+    background: linear-gradient(var(--primary), var(--primary-dark));
+    height: 2.5rem;
+    width: 5.5rem;
+    min-width: 5.5rem;
+    max-width: 5.5rem;
+    font-size: 1.125rem;
+    transform: scale(0.9)
+}
+.donate-button:hover{
+    transform: scale(1);
+    background: linear-gradient(var(--primary), var(--primary-80));
+}
+
+/* the hamburger menu code  */
+
+/* <div class="hamburger-menu-container">
+    <hr class="hamburger-menu-line">
+    <hr class="hamburger-menu-line">
+    <hr class="hamburger-menu-line">
+    <hr class="hamburger-menu-line">
+</div> */
+
+.hamburger-menu-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 15px;
+    position: relative;
+    transform: translate(20px, 10px) scale(0.8);
+    cursor: pointer;
+    width: 300px;
+    padding-right: 3rem;
+}
+
+.hamburger-menu-line{
+    border: 7px solid var(--primary);
+    width: 60%;
+    border-radius: 50px;
+    background-color: var(--primary);
+}
+.hamburger-menu-line:nth-of-type(3){
+    transform-origin: 100% 100%;
+    transform: scaleX(0.5) translateX(-8px);
+    transition: 0.4s ease-in;
+}
+.hamburger-menu-line:last-of-type{
+    position: relative;
+    transform: translateY( -29px);
+    width: 30%;
+}
+
+.hamburger-menu-container:hover .hamburger-menu-line:nth-of-type(3){
+    transform: scaleX(1)
+}
+
+/* the end of the hamburger menu code */
+
+.nav-logo > path:not(.the-brain){
+    fill: lightseagreen;
+    fill: #1a8dcf;
+}
+
+.the-brain{
+
+    fill: var(--primary);
+}
+
+@media(max-width: 720px){
+    .hi-nav {
+        max-height: 15vw;
+    }
+    #search-bar {
+        display: none;
+    }
+}
+
