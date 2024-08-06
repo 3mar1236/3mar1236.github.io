@@ -45,6 +45,8 @@
     }
 
     .darkmode-button{
+        display: none;
+        position: absolute;
         scale: 1.125;
     }
     /* end of more effort TO-DO*/
