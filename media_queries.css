@@ -62,7 +62,7 @@
     }
 
     .app-ad-text {
-        text-align:center;
+        text-align:justify;
         width: auto;
         padding-inline: 1rem;
     }

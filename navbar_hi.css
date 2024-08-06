@@ -124,7 +124,8 @@ height: 4rem;
 
 .donate-button {
     margin-right: min(3rem, 2vw);
-    color: var(--base);
+    /* color: var(--base); */
+    color: var(--base-dark);
     transition: 0.3s ease-in-out;
     font-family: var(--ff);
     font-weight: bold;
@@ -158,7 +159,7 @@ height: 4rem;
 }
 
 .hamburger-menu-container svg{
-    fill: var(--primary);
+    fill: var(--burger-color);
     width: 5rem;
 }
 
