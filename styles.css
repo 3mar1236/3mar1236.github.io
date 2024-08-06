@@ -6,28 +6,47 @@
 
 
 
-:root{
-    /* --dark-1: #353A3D; */
+html{
     --base: #322e2d;
     --base-dark: #252323;
     --base-light: #4e4847;
-    
     --base-80: #322e2db2;
-/* 
-    --base: #21071E;
-    --base-80: #400e3ab1;
-    --base-light: #7e1a72; */
+
+    --neutral: #F8F8F8;
+    --neutral-dark: #7f7f7f;
+    --neutral-60: #f8f8f894;
+    --neutral-80: #f8f8f8c7;
 
     --primary: #bfda8e;
     --primary-80: #bfda8ec4;
     --primary-dark: #626f49;
-    /* --primary: #BFFECE; */
-    /* --primary: #A1C355; */
-    /* --primary: #A9C246; */
     --primary-5: #a6d8491c;
-    --neutral: #F8F8F8;
-    --neutral-60: #f8f8f894;
-    --neutral-80: #f8f8f8c7;
+
+    --burger-color:var(--primary);
+
+    --ff: "Montserrat", sans-serif;
+    --vw-percent: calc(1/100vw);
+}
+html.dark-mode{
+    /* darkmode colors */
+
+    --neutral: #322e2d;
+    --neutral-dark: #252323;
+    --neutral-60: #4e4847;
+    --neutral-80: #322e2db2;
+
+    --base: #9e9d9d;
+    --base-dark: #ffffff;
+    --base-light: #f8f8f894;
+    --base-80: #f8f8f8c7;
+    
+    --primary: #aeeb3c;
+    --primary-80: #bfda8ec4;
+    --primary-dark: #626f49;
+    --primary-5: #a6d8491c;
+
+    --burger-color:#252323;
+
     --ff: "Montserrat", sans-serif;
     --vw-percent: calc(1/100vw);
 }
@@ -35,7 +54,7 @@
     display: none;
 }
 html{
-    background-color: var(--base);
+    background-color: var(--base-dark);
 }
 
 body{
@@ -84,7 +103,8 @@ h1,h2,h3,p{
     border: none;
     font-family: var(--ff);
     font-weight: bolder;
-    color: var(--base);
+    /* color: var(--base); */
+    color: var(--base-dark);
     border-radius: 5px;
     transform: scale(1);
     transition: 0.3s ease-in-out;
@@ -203,6 +223,7 @@ h1,h2,h3,p{
 }
 
 .app-header {
+    text-align: center;
     padding-bottom: 0.5rem;
 }
 
@@ -259,8 +280,10 @@ grid-column: 2;
     text-wrap: nowrap;
     font-size: clamp(1.125rem, 1.5vw, 1.625rem);
     font-weight: 600;
-    background: linear-gradient(45deg, var(--base), var(--base-light));
-    color: var(--neutral-80)
+    background: linear-gradient(-45deg, var(--primary), var(--primary-dark));
+    /* background: (45deg, var(--base), var(--base-light)); */
+    /* color: var(--neutral-80) */
+    color: var(--base-dark);
 }
 .not-alone-footer{
     font-size: 1rem;
