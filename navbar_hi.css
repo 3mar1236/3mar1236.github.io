@@ -26,8 +26,8 @@
 .hi-nav.scrolled .nav-logo path:not(.the-brain){
 fill: transparent;
 }
-.hi-nav.scrolled .logo-container{
-height: 4rem;
+.hi-nav.scrolled{
+height: clamp(3rem, 12vw ,5.25rem);
 }
 
 
