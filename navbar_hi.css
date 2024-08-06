@@ -9,6 +9,8 @@
     background-color: var(--base-dark);
     max-width: 100vw;
     border-bottom: 1px solid var(--neutral);
+    height: clamp(5rem, 12vw ,7rem);
+
 }
 
 .the-brain{
@@ -34,8 +36,7 @@ height: 4rem;
     padding-left: 5vw;
     padding-bottom: 0;
     fill: white;
-    width: 20vw;
-    max-width: 170px;
+    width: clamp(11rem, 20vw , 16rem);
     /* transform: scale(0.55); */
     /* outline:purple 2px solid; */
 }
@@ -68,7 +69,7 @@ height: 4rem;
     font-weight: bold;
     /* font-size: 1.25rem; */
     /* font-size: min(1.25vw, 1.125rem); */
-    font-size:  0.85rem;
+    font-size: clamp(1.125rem, 1.5vw, 1.625rem);
     transition: 0.25s ease-in-out;
 }
 .nav-link:nth-of-type(2){
@@ -77,6 +78,7 @@ height: 4rem;
     grid-template-rows: 1fr;
     grid-column:1/2;
     max-width: 10vw;
+    translate : 0 0.1vw;
     
 
 }
@@ -86,6 +88,7 @@ height: 4rem;
     grid-template-rows: 1fr;
     grid-column:1/2;
     max-width: 14vw;
+    translate : 0 0.1vw;
 }
 .nav-link hr{
 
@@ -108,8 +111,7 @@ height: 4rem;
 .nav-menue{
     grid-column: 2/3;
     grid-row: 0;
-    height: 2.5vw;
-    max-height: 1rem;
+    height: clamp(1.375em, 2.5vw, 1.625rem);
     fill: var(--neutral);
     float: right;
     transform: translateY(1.5px) rotate(0deg) scale(1.4);
@@ -151,37 +153,13 @@ height: 4rem;
 </div> */
 
 .hamburger-menu-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 15px;
-    position: relative;
-    transform: translate(20px, 10px) scale(0.8);
+    display: none;
     cursor: pointer;
-    width: 300px;
-    padding-right: 3rem;
 }
 
-.hamburger-menu-line{
-    border: 7px solid var(--primary);
-    width: 60%;
-    border-radius: 50px;
-    background-color: var(--primary);
-}
-.hamburger-menu-line:nth-of-type(3){
-    transform-origin: 100% 100%;
-    transform: scaleX(0.5) translateX(-8px);
-    transition: 0.4s ease-in;
-}
-.hamburger-menu-line:last-of-type{
-    position: relative;
-    transform: translateY( -29px);
-    width: 30%;
-}
-
-.hamburger-menu-container:hover .hamburger-menu-line:nth-of-type(3){
-    transform: scaleX(1)
+.hamburger-menu-container svg{
+    fill: var(--primary);
+    width: 5rem;
 }
 
 /* the end of the hamburger menu code */

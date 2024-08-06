@@ -1,0 +1,65 @@
+@media (max-width: 43rem) {
+
+    .low-nav-link-container a{
+        display: none;
+        position:fixed;
+        z-index: -1;
+    }
+    .low-nav-link-container{
+        display:flex;
+        gap: clamp(0.75rem, 5vw , 2rem);
+    }
+
+    .hi-nav{
+        justify-content: space-between;
+        padding-inline: clamp(0, 7vw , 2rem);
+        min-height: 5.5rem;
+    }
+    .nav-link-container{
+        display:none;
+    }
+    .hamburger-menu-container{
+        display: initial;
+        translate: 0 4px;
+    }
+
+    .nav-logo{
+        min-width: 10.5rem;
+    }
+
+    .hi-nav.scrolled .the-brain{
+        transition: ease-in 0.3s;
+        transform: scale(1.2) translate(150px,2rem) rotate(10deg);
+    }
+
+
+    /* TO-DO : put more effort */
+    .low-nav-link-container{
+        scale: 1;
+    }
+    .social-icons{
+        scale: 1;
+    }
+    .search-container{
+        scale: 1.125;
+    }
+
+    .darkmode-button{
+        scale: 1.125;
+    }
+    /* end of more effort TO-DO*/
+
+}
+
+@media (min-width: 120rem) {
+    .nav-logo{
+        width: clamp(16rem, 17vw , 19rem);
+        translate: 0 -8px; 
+        scale: 1.25;
+    }
+    .hi-nav.scrolled .the-brain{
+        transition: ease-in 0.3s;
+        transform: scale(1.2) translate(150px,2.25rem) rotate(10deg);
+    }
+    
+}
